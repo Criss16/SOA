@@ -114,6 +114,12 @@ services:
     volumes:
       - rabbitmq_data:/var/lib/rabbitmq  # Persistent storage for RabbitMQ data
 
+  frontend:
+    container_name: frontend-service
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+
 volumes:
   rabbitmq_data:
 

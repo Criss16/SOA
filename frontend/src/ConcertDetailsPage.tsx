@@ -13,7 +13,7 @@ const ConcertDetailsPage = ()=> {
     const auth = useAuth();
 
     const onBuyTicket = () => {
-        fetch(`http://localhost/localhost/tickets/${concertId}`, {
+        fetch(`http://localhost/tickets/${concertId}`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({token: auth.token}),
